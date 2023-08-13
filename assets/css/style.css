@@ -22,18 +22,24 @@ body{
     padding: 0;
     justify-content: space-between;
 }
-img {
+/* img {
     width: 25vw;
     height: 25vh;
     opacity: 100%;
-}
+} */
 #img-right{
     transform: rotate(-10deg);
+    width: 25vw;
+    height: 25vh;
+    opacity: 100%;
 }
 #img-left{
     -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
     transform: rotate(25deg);
+    width: 25vw;
+    height: 25vh;
+    opacity: 100%;
 }
 header{
     display: flex;
@@ -60,10 +66,52 @@ nav a {
     text-decoration: none;
     color:var(--text);
     font-family:Georgia, 'Times New Roman', Times, serif ;
+
     
 }
 .container{
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center vertically */
     width:100%;
     height: 150vh;
     border:5px solid purple;
+}
+
+.slideshow-container{
+    width: 45vw;
+    height:50vh;
+    border: 5px solid green;
+
+}
+.content {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    border: 5px solid rgb(238, 8, 115);
+    justify-content: space-around; /* Distribute items along the main axis */
+    align-items: center; /* Center items vertically */
+    padding: 25ch;
+    
+}
+
+.ring-container {
+    display: flex;
+    width: 25vw;
+    height: 25vh;
+    /* Add any other styling for the ring container */
+}
+
+.rings-img {
+    width: 100%;
+    height: auto;
+    border: 5px red solid;
+    object-fit: contain;
+}
+
+article {
+    width: 65vw;
+    height: 15vh;
+    border: 5px solid grey;
+
 }
