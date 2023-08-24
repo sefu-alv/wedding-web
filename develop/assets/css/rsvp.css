@@ -1,0 +1,120 @@
+* {
+    padding: 0%;
+    margin: 0;
+  }
+  
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .bg-container {
+    position: absolute; /* Use absolute positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("placehold.JPG");
+    background-size: cover; /* Use 'cover' to make the background cover the entire container */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  #image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    height: 500px;
+    background-size: contain;
+    background-color:rgb(203, 208, 212 , 0.453);
+    background-position: center;
+    border-radius: 25px;
+  }
+  
+#intro{
+    color: rgb(0, 0, 0);
+    font-family:"Lucida Handwriting";
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    
+}
+#location{
+    color: rgb(0, 0, 0);
+    font-family:"Lucida Handwriting";
+    font-size: 25px;
+    text-align: center;
+    line-height: 100px;
+}
+#name{
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting";
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+.name-box{
+    position: absolute; 
+    top: 200px;
+    left: 375px;
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    height: 12px;
+    width: 400px;
+   
+}
+#attend-question{
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting";
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    top: 75px;
+
+
+}
+#food-allergies{
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting";
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    top: 100px;
+
+
+}
+.food-box{
+    position: absolute; 
+    top: 425px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    height: 100px;
+    width: 525px;
+   
+}
+#wrapper {
+    border: 1px solid #888;
+    position:absolute;
+    top: 275px;
+    left: 350px;
+  }
+  
+  #wrapper p {
+    display: inline-block; 
+    margin-right: 10px;
+  }
+  #wrapper input[type="radio"] {
+  }
+  

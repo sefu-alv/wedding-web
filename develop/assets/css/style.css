@@ -1,0 +1,174 @@
+:root{
+--bgcolor:#C99999;
+--text:black;
+}
+body{
+    padding: 0%;
+    margin: 0;
+    background-color: var(--bgcolor);
+}
+.header-container{
+    width: 100%;
+    height: 50vh;
+    border:solid 5px orange;
+
+}
+.header-imgs{
+    display: flex;
+    width: 100%;
+    height:25vh;
+    border:5px solid green; 
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+/* img {
+    width: 25vw;
+    height: 25vh;
+    opacity: 100%;
+} */
+#img-right{
+    transform: rotate(-10deg);
+    width: 25vw;
+    height: 25vh;
+    opacity: 100%;
+}
+#img-left{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    transform: rotate(25deg);
+    width: 25vw;
+    height: 25vh;
+    opacity: 100%;
+}
+header{
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    border:5px solid blue;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 10ch;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    height: 5vh;
+    width: 100%;
+    border: 5px solid green;
+    justify-content: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color:var(--text);
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+
+    
+}
+.container{
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center vertically */
+    width:100%;
+    height: 150vh;
+    border:5px solid purple;
+}
+
+.slideshow-container {
+    width: 45vw;
+    height: 42.6vh;
+    border: 5px solid green;
+}
+
+.splide__slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+.content {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    border: 5px solid rgb(238, 8, 115);
+    justify-content: space-around; /* Distribute items along the main axis */
+    align-items: center; /* Center items vertically */
+    
+}
+
+.ring-container {
+    display: flex;
+    width: 25vw;
+    height: 25vh;
+    /* Add any other styling for the ring container */
+}
+
+.rings-img {
+    width: 10vw;
+    height: auto;
+    border: 5px red solid;
+    object-fit: contain;
+}
+
+article {
+    width: 65vw;
+    height: 15vh;
+    border: 5px solid grey;
+    display: flex;
+    overflow-wrap: break-word;
+}
+article p {
+    
+}
+
+
+
+
+/* media break points */
+
+/* ----------- iPhone 12 Mini ----------- */
+
+/* 2340x1080 pixels at 476ppi */ 
+@media only screen
+and (device-width: 360px) 
+and (device-height: 780px) 
+and (-webkit-device-pixel-ratio: 3) { 
+
+    
+}
+
+/* ----------- iPhone 12 Mini ----------- */
+
+/* 2340x1080 pixels at 476ppi */ 
+@media only screen
+and (device-width: 360px) 
+and (device-height: 780px) 
+and (-webkit-device-pixel-ratio: 3) {
+
+
+ }
+
+/* ----------- iPhone 12 Mini ----------- */
+
+/* 2340x1080 pixels at 476ppi */ 
+@media only screen
+and (device-width: 360px) 
+and (device-height: 780px) 
+and (-webkit-device-pixel-ratio: 3) { 
+
+
+}
+
+/* ----------- OnePlus 6 ----------- */
+@media only screen
+and (min-width: 412px) 
+and (max-width: 869px) {
+
+
+}
