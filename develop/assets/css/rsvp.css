@@ -1,12 +1,11 @@
-* {
-    padding: 0%;
-    margin: 0;
-  }
+
   
   html, body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    background-image: url('./assets/images/rose-background.jpg');
+    background-size: cover;
   }
   
   .bg-container {
@@ -15,7 +14,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("placehold.JPG");
     background-size: cover; /* Use 'cover' to make the background cover the entire container */
     background-repeat: no-repeat;
     background-position: center center;
