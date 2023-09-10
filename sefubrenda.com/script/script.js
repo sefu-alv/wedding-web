@@ -1,14 +1,15 @@
 $(document).ready(function() {
+
     var countdownDate = new Date("aug 17, 2024 16:0:0").getTime();
     var countdownTimer = $("#countdown-timer");
-  
+  // this function counts down the days to the set date
     function updateTimer() {
       var now = new Date().getTime();
       var distance = countdownDate - now;
-  
+      // onces the timer ends
       if (distance <= 0) {
         clearInterval(timerInterval);
-        countdownTimer.html("Event has started!");
+        console.log("Wedding Time!!");
         return;
       }
   

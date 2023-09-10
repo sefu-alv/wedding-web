@@ -1,9 +1,17 @@
 body {
-  background-image: url('flowers.jpg');
-  object-fit: contain;
+  background-image: url('./pexels-karolina-grabowska-4608984.jpg');
+  background-size: cover; 
+}
+section{
+ 
+}
+form{
+  display: block ;
+  margin: 5em auto;
+  max-width: 25em;
 }
 @media screen and (max-width: 400px) {
  html body{
-  background-image: url('flowers.jpg');
+  background-image: url('./pexels-karolina-grabowska-4608984.jpg');
  }
 } 
