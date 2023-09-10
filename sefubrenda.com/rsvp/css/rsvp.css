@@ -1,17 +1,24 @@
 body {
   background-image: url('./pexels-karolina-grabowska-4608984.jpg');
   background-size: cover; 
+  background-repeat: no-repeat;
 }
-section{
- 
+.radio-container{
+ display: flex ;
+ gap: 1em;
+ margin: 4px;
+}
+#attendance-title {
+  margin: 0;
 }
 form{
   display: block ;
   margin: 5em auto;
   max-width: 25em;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
  html body{
-  background-image: url('./pexels-karolina-grabowska-4608984.jpg');
+  background-image: url('./pd22-23-28-ploy.jpg');
+  object-fit: fill;
  }
 } 
