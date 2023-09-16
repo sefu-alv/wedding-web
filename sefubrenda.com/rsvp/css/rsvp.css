@@ -1,7 +1,8 @@
 body {
-  background-image: url('./pexels-karolina-grabowska-4608984.jpg');
+  background-image: url('./white-flowers-2465604_1920.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
+  height: 100vh;
 }
 .radio-container{
  display: flex ;
@@ -11,12 +12,18 @@ body {
 #attendance {
   margin: 0;
 }
+section {
+
+}
 form{
   display: block ;
   margin: 5em auto;
   max-width: 25em;
+  
+  background-color: white;
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.308) ;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
  html body{
   background-image:none;
   background-color: white;
@@ -24,12 +31,19 @@ form{
   .navbar-brand{
     display: none;
   }
-  .img-container{
-    display: flex;
-    justify-content: center;
+ 
+  .img-container {
+    position: relative;
+    display: inline-block; 
   }
+  
+  #page-title {
+    margin: 0; /* Remove default margin */
+  }
+  
   .img-container img{
-    max-width: 25em;
+    width:5em;
+    height: 25em;
     object-fit: contain;
   }
 } 
