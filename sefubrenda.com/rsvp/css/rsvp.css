@@ -4,25 +4,8 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
-.radio-container{
- display: flex ;
- gap: 1em;
- margin: 4px;
-}
-#attendance {
-  margin: 0;
-}
-section {
 
-}
-form{
-  display: block ;
-  margin: 5em auto;
-  max-width: 25em;
-  
-  background-color: white;
-  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.308) ;
-}
+
 @media screen and (max-width: 600px) {
  html body{
   background-image:none;
@@ -47,3 +30,90 @@ form{
     object-fit: contain;
   }
 } 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #BDC3C7;
+  font-family: 'Raleway';
+  }
+  .top {
+    background-color: #264356;
+    height: 200px;
+    margin:0;
+    padding:0;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+  }
+  
+  .form {
+    height: 100vh;
+    width: 60vw;
+    background-color: #fff;
+    margin: -110px auto;
+    border-radius: 10px;
+    color: #666;
+    padding: 0px 0px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+  }
+  
+  .info {
+    padding: 10px;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+    padding: 0px;
+    margin: 5px 5px;
+  }
+  
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 100;
+  }
+  
+  p.line {
+    margin: 0px auto 20px auto;
+    color: #999;
+  }
+  
+  .form input {
+    font-size: 15px;
+    color: #666;
+    padding: 6px;
+    margin: 25px auto 20px;
+    display: block;
+    width: 75%;  
+  }
+  
+  input:focus {
+    outline: 0;
+  }
+  
+ 
+  button {
+    color: black;
+    background-color: lightblue;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 32px;
+    width: 200px;
+    margin: 20px auto 0px auto; 
+    
+  }
+  button:hover {
+    background-color: darkblue;
+    transition: .5s;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+
+  .button_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
