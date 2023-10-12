@@ -1,80 +1,55 @@
 body {
-  background-image: url('./white-flowers-2465604_1920.jpg');
+  background-image: url('./hydrangea2.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   height: 100vh;
 }
-
-
-@media screen and (max-width: 600px) {
- html body{
-  background-image:none;
-  background-color: white;
-  }
-  .navbar-brand{
-    display: none;
-  }
- 
-  .img-container {
-    position: relative;
-    display: inline-block; 
-  }
-  
-  #page-title {
-    margin: 0; /* Remove default margin */
-  }
-  
-  .img-container img{
-    width:5em;
-    height: 25em;
-    object-fit: contain;
-  }
-} 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #BDC3C7;
-  font-family: 'Raleway';
-  }
   .top {
-    background-color: #264356;
+    
     height: 200px;
     margin:0;
     padding:0;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+    
   }
   
   .form {
-    height: 100vh;
-    width: 60vw;
+    height: auto;
+    width: 50vw;
     background-color: #fff;
     margin: -110px auto;
     border-radius: 10px;
-    color: #666;
+    color: #000000;
     padding: 0px 0px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+    display: flex;
+  flex-direction: column; 
   }
   
   .info {
     padding: 10px;
   }
-  
+  .names {
+    font-family: 'Sacramento', cursive;
+  }
   h1, h2, p {
     text-align: center;
     padding: 0px;
     margin: 5px 5px;
+    font-family: 'Cormorant Garamond', serif;
   }
-  
+  p {
+    font-size: 1.3pc;
+  }
   h2 {
-    font-family: 'Great Vibes', cursive;
+    
     font-weight: 100;
   }
   
-  p.line {
+  .line {
+    width: 28%;
     margin: 0px auto 20px auto;
-    color: #999;
+    color: #000000;
+    border: dashed 1px;
   }
   
   .form input {
@@ -104,7 +79,7 @@ html, body {
     
   }
   button:hover {
-    background-color: darkblue;
+    background-color: rgb(100, 183, 221);
     transition: .5s;
   }
   
@@ -116,4 +91,73 @@ html, body {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 4pc;
   }
+
+  @media screen and (max-width: 600px) {
+    html body{
+      background-color: lightblue;
+      background-image: none;
+    
+     }
+     .navbar-brand{
+       display: none;
+     }
+     .top {
+    
+      height: 100px;
+      margin:0;
+      padding:0;
+      
+    }
+
+     #page-title {
+       margin: 0; /* Remove default margin */
+     }
+     
+     .img-container img{
+       width:5em;
+       height: 25em;
+       object-fit: contain;
+     }
+     .form {
+      height: auto;
+      width: 90%;
+      background-color: #fff;
+      margin: -110px auto;
+      border-radius: 10px;
+      color: #000000;
+      padding: 0px 0px;
+      box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
+      display: flex;
+    flex-direction: column; 
+    }
+    
+     .names {
+      font-family: 'Sacramento', cursive;
+      font-size: 30px;
+    }
+    .line {
+      width: 80%;
+      margin: 0px auto 20px auto;
+      color: #000000;
+      border: dashed 1px;
+    }
+    
+   } 
+   @media screen and (max-width: 1300px) { 
+
+      .navbar-brand{
+        display: none;
+      }
+     
+      .img-container {
+        position: relative;
+        display: inline-block; 
+      }
+      
+      #page-title {
+        margin: 0; /* Remove default margin */
+      }
+
+   }
