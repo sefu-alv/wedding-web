@@ -1,0 +1,73 @@
+:root{
+
+}
+
+/* nav bar css */
+li {
+    list-style: none;
+    transition: 0.5s;
+  }
+  a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  
+  ul:hover li {
+    filter: blur(5px);
+  }
+  ul li:hover {
+    filter: blur(0px);
+  }
+  .intro p {
+    font-family: var(--cursive);
+    color: var(--dark);
+    font-size: 10em;
+    position: relative;
+  }
+  
+  .navbar_text {
+    font-size: 2em;
+    color: var(--dark);
+  }
+
+  /* intro text styling */
+  #intro-container{
+    width: 75%;
+    height: 20pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* card fade in styling */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fade-in 2s ease forwards;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Delay the animation for each row of cards */
+  .card-container:nth-child(4n+1) {
+    animation-delay: 0s;
+  }
+
+  .card-container:nth-child(4n+2) {
+    animation-delay: 0.5s; 
+  }
+
+  .card-container:nth-child(4n+3) {
+    animation-delay: 1s; 
+  }
+
+  .card-container:nth-child(4n+4) {
+    animation-delay: 1.5s;
+  }
+ 
