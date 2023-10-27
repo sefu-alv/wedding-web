@@ -1,53 +1,63 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql2'); // MySQL driver
+// Import necessary modules
+const express = require("express");
+const bodyParser = require("body-parser");
+const Sequelize = require("sequelize"); // Import Sequelize
 const app = express();
 const port = 3000;
-const dotenv = require('dotenv'); // Load environment variables from .env
-dotenv.config();
+
+// Create a Sequelize instance
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: "localhost",
+    dialect: "mysql",
+  }
+);
+
+// Define a model for the RSVP data
+const RSVP = sequelize.define("RSVP", {
+  name: Sequelize.STRING,
+  knownAllergies: Sequelize.STRING,
+  numGuests: Sequelize.INTEGER,
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-});
+// Handle the POST request from the RSVP form
+app.post("/process_rsvp", (req, res) => {
+  const name = req.body.name;
+  const knownAllergies = req.body.known_allergies;
+  const numGuests = req.body.num_guests;
 
-db.connect(err => {
-    if (err) {
-        console.error('Database connection error:', err.stack);
-        return;
-    }
-    console.log('Connected to database');
-});
+  app.get("/api/rsvps", (req, res) => {
+    RSVP.findAll()
+      .then((rsvps) => {
+        res.json(rsvps);
+      })
+      .catch((error) => {
+        console.error("Error fetching RSVP data:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+      });
+  });
 
-app.post('/process_rsvp', (req, res) => {
-    const name = req.body.name;
-    const knownAllergies = req.body.known_allergies;
-    const numGuests = req.body.num_guests;
-
-    // Log the input data to the console
-    console.log('Received RSVP:', {
-        name: name,
-        knownAllergies: knownAllergies,
-        numGuests: numGuests,
-    });
-
-    // Insert data into the database
-    const sql = 'INSERT INTO RSVPs (Name, KnownAllergies, NumberOfGuests) VALUES (?, ?, ?)';
-    db.query(sql, [name, knownAllergies, numGuests], (err, result) => {
-        if (err) {
-            console.error('Database error:', err);
-            res.status(500).send('Internal Server Error');
-        } else {
-            console.log('Inserted into database:', result);
-            res.send('RSVP submitted successfully!');
-        }
+  // Insert data into the database
+  RSVP.create({
+    name: name,
+    knownAllergies: knownAllergies,
+    numGuests: numGuests,
+  })
+    .then(() => {
+      res.send("RSVP submitted successfully!");
+    })
+    .catch((error) => {
+      console.error("Database error:", error);
+      res.status(500).send("Internal Server Error");
     });
 });
 
+// Start the server
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
