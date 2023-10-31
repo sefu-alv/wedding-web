@@ -1,3 +1,40 @@
+:root{
+  --bgcolor:#C99999;
+  --dark:black;
+  --light:white;
+  --cursive:'Tangerine', cursive;
+  --background_blue:#C6E2FF;
+  --words:#4682B4;
+  }
+
+  body{
+    background-color: var(--background_blue);
+  }
+    /* title styling */
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 40vh;
+      margin-top: 50px;
+    }
+    
+    .title-container div {
+      text-align: center;
+      margin: 0;
+      overflow: hidden; 
+    }
+    
+    .title-container p {
+      gap: 1.5vw;
+      font-size: 10vh; 
+      line-height: 1;
+      font-family: 'Tangerine', cursive;
+      color: var(--words);
+    }
+    
+  /* navbar styling */
 li {
     list-style: none;
     transition: 0.5s;
@@ -15,10 +52,30 @@ li {
   ul li:hover {
     filter: blur(0px);
   }
+  .navbar-nav .nav-link {
+    color: var(--background_blue);
+  }
+  .navbar {
+    margin-top: 5vh; 
+    background-color: var(--words);
+  }
+  /* big margin space */
   .top {
     
-    height: 200px;
+    height: 100px;
     margin:0;
     padding:0;
     
   }
+
+  /* section words styling */
+.the{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 5pc;
+  font-weight: 100;
+}
+.following_word{
+  font-family: 'Tangerine', cursive;
+  font-size: 5pc;
+  color: var(--words);
+}
