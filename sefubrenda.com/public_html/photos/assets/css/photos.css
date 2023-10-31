@@ -1,7 +1,10 @@
 :root{
-
+--background_blue:#C6E2FF;
+--words:#4682B4;
 }
-
+body{
+  background-color: var(--background_blue);
+}
 /* nav bar css */
 li {
     list-style: none;
@@ -9,7 +12,7 @@ li {
   }
   a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--background_blue);
     font-size: 2.5rem;
     font-weight: 500;
   }
@@ -22,7 +25,7 @@ li {
   }
   .intro p {
     font-family: var(--cursive);
-    color: var(--dark);
+    color: var(--words);
     font-size: 10em;
     position: relative;
   }
@@ -53,7 +56,33 @@ li {
       opacity: 1;
     }
   }
-
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    margin-top: 50px;
+  }
+  
+  .title-container div {
+    text-align: center;
+    margin: 0;
+    overflow: hidden; 
+  }
+  
+  .title-container p {
+    gap: 1.5vw;
+    font-size: 10vh; 
+    line-height: 1;
+    font-family: 'Tangerine', cursive;
+    color: var(--words);
+  }
+  
+.navbar {
+  margin-top: 5vh; 
+  background-color: var(--words);
+}
   /* Delay the animation for each row of cards */
   .card-container:nth-child(4n+1) {
     animation-delay: 0s;

@@ -1,20 +1,21 @@
 function validateForm() {
-    // Example: Check if the name field is not empty
     var name = document.getElementById('name').value;
+    var allergies = document.getElementById('allergies').value;
+    var guests = document.getElementById('guest').value;
+
     if (name === "") {
         alert("Name must be filled out");
         return;
     }
 
-    // You can add more validation logic here...
-
-    // If validation passes, submit the form using AJAX
-    submitForm();
+    submitForm(name, allergies, guests);
 }
 
-function submitForm() {
-    var form = document.getElementById('rsvpForm');
-    var formData = new FormData(form);
+function submitForm(name, allergies, guests) {
+    var formData = new FormData();
+    formData.append('name', name);
+    formData.append('known_allergies', allergies);
+    formData.append('num_guests', guests);
 
     fetch('/process_rsvp', {
         method: 'POST',
